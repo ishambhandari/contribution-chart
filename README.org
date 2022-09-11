@@ -1,0 +1,7 @@
+* Read me
+
+Contribution chart which consists commit history of both github and gitlab.
+
+** API used
+
+** Usage
