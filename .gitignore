@@ -1,0 +1,38 @@
+# Dependency directories
+/node_modules
+
+# Build directories
+/build
+/dist
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Compiled files
+*.log
+*.lock
+*.map
+
+# Cache directories
+.cache/
+
+# Temporary files
+*.log*
+*.tmp
+*.bak
+*.swp
+
+# Ignore your specific configuration files
+# Adjust based on your setup
+/webpack.config.js
+/tsconfig.json
+
+
