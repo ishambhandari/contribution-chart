@@ -7,7 +7,7 @@ export interface GithubProps {
   onError: (error: string) => void;
 }
 
-const Github: React.FunctionComponent<GithubProps> = ({ token, userName, onSuccess, onError }) => {
+const Github: React.FC<GithubProps> = ({ token, userName, onSuccess, onError }) => {
 
   const headers = {
     "Content-Type": "application/json",
