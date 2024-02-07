@@ -17,6 +17,6 @@ Default.args = {
         console.log(data)
     },
     onError: (errorMessage) => {
-        console.log(`Error is -> ${errorMessage}`)
+        console.error(errorMessage)
     }
 };  

@@ -35,17 +35,14 @@ const Github: React.FunctionComponent<GithubProps> = ({ token, userName, onSucce
 
     await fetch(githubBaseUrl, { method: 'POST', body: JSON.stringify(body), headers: headers })
       .then(function (response) {
-        response.json().then((responseBody)=> {
-          if(response.status==200) {
-            if(responseBody.errors) onError(responseBody.errors[0]?.message)
+        response.json().then((responseBody) => {
+          if (response.status == 200) {
+            if (responseBody.errors) onError(responseBody.errors[0]?.message)
             else onSuccess(responseBody.data?.user?.contributionsCollection?.contributionCalendar)
           }
-        }).catch(err=> {
-          onError(`Malformed Json ${err}`)
-        })
-      }).catch((err: any) => {
-        onError(err)
-      });
+          else onError(responseBody?.message)
+        }).catch((err:any) => onError(`Malformed Json ${err}`))
+      }).catch((err: any) => onError(JSON.stringify(err)));
   }
 
   useEffect(() => {
