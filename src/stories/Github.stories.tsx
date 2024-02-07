@@ -13,8 +13,10 @@ export const Default = Template.bind({});
 Default.args = {
     token: "TOK",
     userName: "iampratik32",
+    onSuccess: (data) => {
+        console.log(data)
+    },
     onError: (errorMessage) => {
-        console.log(`Error is -> ${errorMessage}`)
+        console.error(errorMessage)
     }
-  // Add any default props you want to showcase
 };  
